@@ -1,0 +1,48 @@
+/* The root wrapper element Vite mounts into.
+   - max-width centers and constrains the whole app
+   - text-align: center makes ALL text centered (often not desired in apps) */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Vite demo logo styling (safe to remove if you don't use the logo) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;         /* hint to browser that filter may animate */
+  transition: filter 300ms;    /* smooth glow on hover */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Spin animation used by the Vite/React demo logo */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Only animate if user has NOT requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* In the Vite demo, this targets the second link’s .logo */
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ⚠️ This overrides Bootstrap's .card globally.
+   If you keep it, every .card gets extra padding. */
+.card {
+  padding: 2em;
+}
+
+/* Muted helper text style (used in the Vite template) */
+.read-the-docs {
+  color: #888;
+}

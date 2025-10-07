@@ -1,0 +1,81 @@
+/* Horisontell scroll-rad med snygg snapping */
+.hscroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: .5rem;
+}
+.h-item {
+  scroll-snap-align: start;
+}
+
+/* Klockkortens bredd i raden */
+.clock-card {
+  min-width: 280px;   /* funkar bra på mobil */
+  max-width: 340px;   /* snygg rad på desktop */
+}
+/* Mjuk mörk rymd-gradient som grund (byt färger om du vill) */
+body {
+  background: radial-gradient(120% 90% at 50% -10%,
+    #1f2f53 0%,
+    #192a46 55%,
+    #121f36 100%);
+}
+
+/* Canvasen ligger bakom allt innehåll */
+.starfield-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none; /* klick/scroll går igenom */
+  display: block;
+}
+
+/* Ditt app-innehåll läggs ovanpå stjärnhimlen */
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+/* === Tema-variabler === */
+:root {
+  /* Header (navbar) färger */
+  --brand-bg: #0ea5e9;   /* header-bakgrund – ljus/cyanblå */
+  --brand-fg: #ffffff;   /* header-text/ikoner */
+
+  /* Rubrikfärg (H1–H6) */
+  --heading-color: #0f172a; /* mörk blå-grå (slate) */
+}
+
+/* Sätt rubrikfärg globalt */
+:root { --bs-heading-color: var(--heading-color); }
+h1, h2, h3, h4, h5, h6 { color: var(--bs-heading-color) !important; }
+
+/* Egen navbar-style */
+.navbar-custom {
+  background: var(--brand-bg) !important;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-text {
+  color: var(--brand-fg) !important;
+}
+
+/* Gör outline-knappar snygga på mörk header */
+.navbar-custom .btn-outline-light {
+  --bs-btn-color: var(--brand-fg);
+  --bs-btn-border-color: rgba(255,255,255,.7);
+  --bs-btn-hover-bg: rgba(255,255,255,.18);
+  --bs-btn-hover-border-color: rgba(255,255,255,.9);
+  --bs-btn-active-bg: rgba(255,255,255,.28);
+}
+
+/* Om du använder .btn-light i headern */
+.navbar-custom .btn-light {
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-bg: #f3f4f6;
+  --bs-btn-hover-border-color: #f3f4f6;
+  --bs-btn-color: #0b3a52; /* textfärg på ljus knapp */
+}
