@@ -1,4 +1,4 @@
-# 🌍 World Clock – React + TypeScript
+#  World Clock – React + TypeScript
 
 En responsiv världsklocka där användaren kan:
 - Lägga till städer **från en lista (grupperad per kontinent)** eller som **egen stad** med valfri IANA-tidszon
@@ -9,7 +9,7 @@ En responsiv världsklocka där användaren kan:
 
 ---
 
-## ✨ Demo & skisser
+##  Demo & skisser
 
 - 🔧 **Live demo:** _länk till Netlify/Vercel eller GitHub Pages_
 - 🔧 **Skisser/Wireframes:** _länk till Figma/Bilder_
@@ -18,7 +18,7 @@ En responsiv världsklocka där användaren kan:
 
 ---
 
-## 🚀 Teknik
+##  Teknik
 
 - **React** (funktionella komponenter + hooks)
 - **TypeScript** (strikta typer; string literal types/enum för tidszoner)
@@ -29,7 +29,7 @@ En responsiv världsklocka där användaren kan:
 
 ---
 
-## ✅ User stories (urval)
+##  User stories (urval)
 
 Som **användare** vill jag…
 
@@ -47,7 +47,7 @@ Som **användare** vill jag…
 
 ---
 
-## 🧩 Projektstruktur
+##  Projektstruktur
 
 ```text
 src/
